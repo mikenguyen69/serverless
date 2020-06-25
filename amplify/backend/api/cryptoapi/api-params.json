@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/coins",
+            "lambdaFunction": "cryoptofunction",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "cryptoapi",
+    "apiName": "cryptoapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "cryoptofunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-crytoapp-local-125254-authRole",
+        "unAuthRoleName": "amplify-crytoapp-local-125254-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "cryoptofunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
