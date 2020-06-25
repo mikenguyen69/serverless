@@ -1,19 +1,19 @@
 {
 	"function": {
-		"cryoptofunction": {
+		"testfunction": {
 			"build": true,
 			"providerPlugin": "awscloudformation",
 			"service": "Lambda"
 		}
 	},
 	"api": {
-		"cryptoapi": {
+		"testapi": {
 			"service": "API Gateway",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [
 				{
 					"category": "function",
-					"resourceName": "cryoptofunction",
+					"resourceName": "testfunction",
 					"attributes": [
 						"Name",
 						"Arn"

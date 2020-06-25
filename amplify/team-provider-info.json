@@ -1,15 +1,15 @@
 {
     "local": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-crytoapp-local-125254-authRole",
-            "UnauthRoleArn": "arn:aws:iam::091427512091:role/amplify-crytoapp-local-125254-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::091427512091:role/amplify-crytoapp-local-125254-authRole",
+            "AuthRoleName": "amplify-cryptoapp-local-132500-authRole",
+            "UnauthRoleArn": "arn:aws:iam::091427512091:role/amplify-cryptoapp-local-132500-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::091427512091:role/amplify-cryptoapp-local-132500-authRole",
             "Region": "ap-southeast-1",
-            "DeploymentBucketName": "amplify-crytoapp-local-125254-deployment",
-            "UnauthRoleName": "amplify-crytoapp-local-125254-unauthRole",
-            "StackName": "amplify-crytoapp-local-125254",
-            "StackId": "arn:aws:cloudformation:ap-southeast-1:091427512091:stack/amplify-crytoapp-local-125254/361546c0-b67e-11ea-bb18-068c48abfc3a",
-            "AmplifyAppId": "damvyngus2op3"
+            "DeploymentBucketName": "amplify-cryptoapp-local-132500-deployment",
+            "UnauthRoleName": "amplify-cryptoapp-local-132500-unauthRole",
+            "StackName": "amplify-cryptoapp-local-132500",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:091427512091:stack/amplify-cryptoapp-local-132500/b30367d0-b682-11ea-8569-02c6c7bea9ac",
+            "AmplifyAppId": "d2uxmxmtt12qed"
         }
     }
 }

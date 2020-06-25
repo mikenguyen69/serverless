@@ -33,12 +33,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"cryoptofunction",
+						"testfunction",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"cryoptofunction",
+									"testfunction",
 									"-",
 									{
 										"Ref": "env"
@@ -67,8 +67,8 @@
 				"Runtime": "nodejs12.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "amplify-crytoapp-local-125254-deployment",
-					"S3Key": "amplify-builds/cryoptofunction-3475724b49685a4a3841-build.zip"
+					"S3Bucket": "amplify-cryptoapp-local-132500-deployment",
+					"S3Key": "amplify-builds/testfunction-4f704a47586278613468-build.zip"
 				}
 			}
 		},
@@ -78,12 +78,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"crytoappLambdaRole525d877a",
+						"cryptoappLambdaRole0c3b1aa4",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"crytoappLambdaRole525d877a",
+									"cryptoappLambdaRole0c3b1aa4",
 									"-",
 									{
 										"Ref": "env"

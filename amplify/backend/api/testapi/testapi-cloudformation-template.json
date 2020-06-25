@@ -14,15 +14,15 @@
         },
     
     
-          "functioncryoptofunctionName": {
+          "functiontestfunctionName": {
             "Type": "String",
-            "Default": "functioncryoptofunctionName"
+            "Default": "functiontestfunctionName"
           },
         
           
-          "functioncryoptofunctionArn": {
+          "functiontestfunctionArn": {
             "Type": "String",
-            "Default": "functioncryoptofunctionArn"
+            "Default": "functiontestfunctionArn"
           }
         
           
@@ -45,16 +45,16 @@
         
         
         
-      "cryptoapi": {
+      "testapi": {
         "Type": "AWS::ApiGateway::RestApi",
         "Properties": {
           "Description": "",
-          "Name": "cryptoapi",
+          "Name": "testapi",
           "Body": {
             "swagger": "2.0",
             "info": {
               "version": "2018-05-24T17:52:00Z",
-              "title": "cryptoapi"
+              "title": "testapi"
             },
             "host": {
                 "Fn::Join": [
@@ -176,7 +176,7 @@
                             
                             {
                                 
-                                "Ref": "functioncryoptofunctionArn"
+                                "Ref": "functiontestfunctionArn"
                             },
                             
                             "/invocations"
@@ -275,7 +275,7 @@
                           
                           {
                             
-                            "Ref": "functioncryoptofunctionArn"
+                            "Ref": "functiontestfunctionArn"
                           },
                           
                           "/invocations"
@@ -332,12 +332,12 @@
                   
         
         
-        "functioncryoptofunctionPermissioncryptoapi": {
+        "functiontestfunctionPermissiontestapi": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
                 "FunctionName": 
                     {
-                        "Ref":  "functioncryoptofunctionName"
+                        "Ref":  "functiontestfunctionName"
                     },
                     
                     "Action": "lambda:InvokeFunction",
@@ -356,7 +356,7 @@
                             },
                             ":",
                             {
-                                "Ref": "cryptoapi"
+                                "Ref": "testapi"
                             },
                             "/*/*/*"
                         ]
@@ -367,7 +367,7 @@
         
         
         
-      "DeploymentAPIGWcryptoapi": {
+      "DeploymentAPIGWtestapi": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",
@@ -381,7 +381,7 @@
             ]
           },
           "RestApiId": {
-            "Ref": "cryptoapi"
+            "Ref": "testapi"
           }
         }
       }
@@ -389,15 +389,15 @@
     "Outputs": {
         "RootUrl": {
             "Description": "Root URL of the API gateway",
-            "Value": {"Fn::Join": ["", ["https://", {"Ref": "cryptoapi"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
+            "Value": {"Fn::Join": ["", ["https://", {"Ref": "testapi"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
         },
         "ApiName": {
           "Description": "API Friendly name",
-          "Value": "cryptoapi"
+          "Value": "testapi"
         },
         "ApiId": {
           "Description": "API ID (prefix of API URL)",
-          "Value": {"Ref": "cryptoapi"}
+          "Value": {"Ref": "testapi"}
         }
     }
   }
